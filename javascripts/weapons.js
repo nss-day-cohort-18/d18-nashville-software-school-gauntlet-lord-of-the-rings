@@ -1,5 +1,14 @@
 "use strict";
 
+/*
+  Initializing some different weapons to choose from. 
+
+  name, 
+  damage,
+  hands
+
+*/
+
 var Weapon = function() {
   this.name = "bare hands";
   this.damage = 1;

@@ -9,6 +9,8 @@ Gauntlet.SpellBook = {};
 
 /*
   Base spell function that defines name, damage, damage type
+
+  Set up some different types of spells, similar to Sphere()
  */
 Gauntlet.SpellBook.Spell = function() {
   this.name = "";
