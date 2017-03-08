@@ -32,7 +32,7 @@ app.factory("MonsterFactory", function(LOTR) {
 		LOTR.Combatants.Monsters[customMonster.variableName] = function() {
 			this.health = this.health + customMonster.health;
 			this.species = customMonster.species;
-		}
+		};
 		LOTR.Combatants.Monsters[customMonster.variableName].prototype = new LOTR.Combatants.Monsters.Monster();
 	};
 
