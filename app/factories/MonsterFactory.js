@@ -19,6 +19,26 @@ app.factory("MonsterFactory", function(LOTR) {
 	LOTR.Combatants.Monsters.Orc.prototype = new LOTR.Combatants.Monsters.Monster();
 
 
-	return (LOTR.Combatants);
+	let myMonsters = [
+		{
+			name: "Black Rider",
+			health: 40,
+			species: "Scary Guy",
+			variableName: "BlackRider"
+		}
+	];
+
+	let createMonsters = (customMonster) => {
+		LOTR.Combatants.Monsters[customMonster.variableName] = function() {
+			this.health = this.health + customMonster.health;
+			this.species = customMonster.species;
+		}
+		LOTR.Combatants.Monsters[customMonster.variableName].prototype = new LOTR.Combatants.Monsters.Monster();
+	};
+
+	myMonsters.forEach((monster) => createMonsters(monster));
+
+
+	return (LOTR.Combatants.Monsters);
 
 });
