@@ -1,0 +1,50 @@
+<!-- battleview -->
+<div ng-control="BattleViewCtrl" class="container">
+  <!-- fellowship player and opponent faceoff -->
+  <div class="row">
+  <!-- left column start -->
+<div class="col-sm-6 col-md-4">
+<!-- progress bar -->
+<div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+    <span class="sr-only">60% Complete</span>
+  </div>
+</div>
+<!-- player card -->
+  <div class="thumbnail">
+    <img ng-src="{{ player.img }}" alt="{{ player.name }}">
+    <div class="caption">
+      <h3>{{ player.name }}</h3>
+      <p>{{ player.health }}</p>
+      <p>{{ player.strength }}</p>
+      <p>{{ player.weapon }}</p>
+    </div>
+  </div>
+</div>
+<!-- right column start -->
+<div class="col-sm-6 col-md-4">
+<!-- progress bar -->
+<div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+    <span class="sr-only">60% Complete</span>
+  </div> 
+</div>
+<!-- enemy card -->
+  <div class="thumbnail">
+    <img ng-src="{{ monster.img }}" alt="{{ monster.img }}">
+    <div class="caption">
+      <h3>{{ monster.name }}</h3>
+      <p>{{ monster.health }}</p>
+      <p>{{ monster.strength }}</p>
+      <p>{{ monster.weapon }}</p>
+    </div>
+  </div>
+</div>
+</div>
+<!-- button  -->
+<div class="row">
+<div class="col-md-4 text-center">
+    <button id="singlebutton" name="singlebutton" class="btn btn-primary"> attack! </button> 
+</div>
+</div>
+</div>
