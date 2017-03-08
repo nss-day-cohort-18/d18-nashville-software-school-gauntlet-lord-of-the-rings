@@ -2,10 +2,15 @@
 console.log("App.js is connected!");
 
 var app = angular.module("Gauntlet", ["ngRoute"])
-.service("LOTR", function() {
+.service("LOTR", function(){
 	this.Weapons = {};
-	this.Combatants = {};
+	this.Combatants = {
+		Monsters: {},
+		Fellowship: {}
+	};
+	
 });
+
 
 app.config(function($routeProvider, $locationProvider) {
 	$routeProvider
