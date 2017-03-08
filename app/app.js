@@ -1,7 +1,11 @@
 "use strict";
 console.log("App.js is connected!");
 
-var app = angular.module("Gauntlet", ["ngRoute"]);
+var app = angular.module("Gauntlet", ["ngRoute"])
+.service("LOTR", function() {
+	this.Weapons = {};
+	this.Combatants = {};
+});
 
 app.config(function($routeProvider, $locationProvider) {
 	$routeProvider
@@ -24,13 +28,10 @@ app.config(function($routeProvider, $locationProvider) {
 		.otherwise('/Welcome');
 });
 
-app.run(($location) => {
+app.run(($location, LOTR) => {
 	console.log("Here is Gauntlet app");
+	console.log("And here is your LOTR obj: ", LOTR);
 });
-
-
-
-
 
 
 
