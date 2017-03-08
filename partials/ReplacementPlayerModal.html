@@ -1,0 +1,37 @@
+  <!-- Replacement Player Modal -->
+
+  <div ng-control="ReplacementPlayerCtrl" class="container">
+  	<div class="row">  
+  	<div id="myModal2" class="modal fade in">
+          <div class="modal-dialog">
+              <div class="modal-content">
+   
+                  <div class="modal-header">
+                      <h4 class="modal-title">Frodo Died!</h4>
+                  </div>
+                  <div class="modal-body">
+                      <h4>Who's Next?</h4>
+					  <!-- choose player view -->
+					    <div class="row" ng-repeat="player in players">
+					    <!-- card -->
+					      <div class="col-sm-6 col-md-4">
+					        <div class="thumbnail">
+					          <img ng-src="{{ player.img }}" alt="{{{ player.name }}}">
+					          <div class="caption">
+					            <h3>{{ player.name }}</h3>
+					            <p>{{ player.health }}</p>
+                      <p>{{ player.weapon }}</p>
+					            <p>{{ player.damage }}</p>
+					          </div>
+					        </div>
+					      </div> 
+					    <!-- end card -->
+                  </div>
+                  <div class="modal-footer">
+                      <div class="btn-group">
+                          <button class="btn btn-success">Return to Battle!</button>
+                      </div>
+                  </div>
+              </div><!-- /.modal-content -->
+          </div><!-- /.modal-dalog -->
+      </div><!-- /.modal -->
