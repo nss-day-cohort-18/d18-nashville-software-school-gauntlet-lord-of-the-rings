@@ -8,9 +8,9 @@ app.factory("WeaponFactory", function(LOTR) {
 		this.name = "";
 		this.damage = Math.floor(Math.random() * 5);
 
-		this.toString = function() {
-    	return this.name + " for " + this.damage + " damage!";
-  	};
+		// this.toString = function() {
+  //   	return this.name + " for " + this.damage + " damage!";
+  // 	};
 	};
 
 
