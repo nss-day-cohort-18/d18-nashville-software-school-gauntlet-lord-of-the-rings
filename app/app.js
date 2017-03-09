@@ -26,8 +26,12 @@ app.config(function($routeProvider, $locationProvider) {
 			templateUrl: '/partials/BattleView.html',
 			controller: 'BattleViewCtrl',
 		})
+		.when('/Replacement', {
+			templateUrl: '/partials/ReplacementPlayerModal.html',
+			controller: 'ReplacementPlayerCtrl'
+		})
 		.when('/Summary', {
-			templateUrl: '/partials/Summary.html',
+			templateUrl: '/partials/SummaryModal.html',
 			controller: 'SummaryCtrl',
 		})
 		.otherwise('/Welcome');
