@@ -23,10 +23,20 @@ app.factory("CurrentStateFactory", function() {
 		return myStatus.myCurrentMonsters;
 	};
 
+	let killPlayer = (playerName) => {
+		function findPlayer(player) {
+			return player.name === playerName;
+		}
+		let myPlayer = myStatus.myCurrentFellowship.find(findPlayer);
+		console.log(myPlayer);
+		return myStatus.myCurrentFellowship;
+	};
+
 	return {
 		getCurrentStatus,
 		setCurrentStatus,
-		killMonster
+		killMonster,
+		killPlayer
 	};
 
 });

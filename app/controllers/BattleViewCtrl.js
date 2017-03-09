@@ -20,7 +20,7 @@ app.controller("BattleViewCtrl", function($scope, $http, $location, $timeout, LO
 		health: 50,
 		weapon: {
 			name: "Axe",
-			damage: 10
+			damage: 20
 		}
 	};
 
@@ -46,6 +46,7 @@ app.controller("BattleViewCtrl", function($scope, $http, $location, $timeout, LO
 			$timeout(function() {
 				if (s.player.health - s.monster.weapon.damage <= 0) {
 					s.player.health = 0;
+					CurrentStateFactory.killPlayer(s.player.name);
 					console.log("Your player is supposed to be dead: ", s.player.health);
 				} else {
 					s.player.health -= s.monster.weapon.damage;
