@@ -1,13 +1,13 @@
 [
 	{
-		"name": "Ringraiths",
+		"name": "Ringraith",
 		"health": 50,
-		"variableName": "Ringraiths",
-		"weapon": "TwoHendedSword"
+		"variableName": "Ringraith",
+		"weapon": "TwoHandedSword"
 	},
 	{
 		"name": "Orc",
-		"health": 20,
+		"health": 30,
 		"variableName": "Orc",
 		"weapon": "Sword"
 	},
@@ -34,5 +34,11 @@
 		"health": 200,
 		"variableName": "Saruman",
 		"weapon": "WizardStaff"
+	},
+	{
+		"name": "Fellbeast",
+		"health": 200,
+		"variableName": "Fellbeast",
+		"weapon": "DragonTeeth"
 	}
 ]

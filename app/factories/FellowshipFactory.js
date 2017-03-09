@@ -6,10 +6,10 @@ app.factory("FellowshipFactory", function(LOTR) {
 
 	LOTR.Combatants.Fellowship.Hero = function() {
 		this.name = "";
-		this.health = 50;
+		this.health = "";
 		this.toString = function() {
-    	return "My name is " + this.name + " and I have  " + this.health + " health!";
-  	};
+   //  	return "My name is " + this.name + " and I have  " + this.health + " health!";
+  	// };
 	};
 
 	let createFellowship = (customHero) => {

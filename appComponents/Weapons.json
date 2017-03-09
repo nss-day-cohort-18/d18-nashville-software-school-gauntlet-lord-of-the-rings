@@ -1,7 +1,7 @@
 [
 	{
 		"name": "Sting",
-		"damage": 40,
+		"damage": 30,
 		"variableName": "Sting"
 	},
 	{
@@ -16,37 +16,42 @@
 	},
 	{
 		"name": "Battle Axe",
-		"damage": 40,
+		"damage": 50,
 		"variableName": "BattleAxe"
 	},
 	{
 		"name": "Wizard Staff",
-		"damage": 40,
+		"damage": 70,
 		"variableName": "WizardStaff"
 	},
 	{
 		"name": "Dagger",
-		"damage": 40,
+		"damage": 25,
 		"variableName": "Dagger"
 	},
 	{
 		"name": "Teeth",
-		"damage": 40,
+		"damage": 30,
 		"variableName": "Teeth"
 	},
 	{
 		"name": "Giant Spear",
-		"damage": 40,
+		"damage": 100,
 		"variableName": "GiantSpear"
 	},
 	{
-		"name": "Two handed Sword",
-		"damage": 40,
+		"name": "Two Handed Sword",
+		"damage": 50,
 		"variableName": "TwoHandedSword"
 	},
 	{
+		"name": "Dragon Teeth",
+		"damage": 70,
+		"variableName": "DragonTeeth"
+	},
+	{
 		"name": "Sword",
-		"damage": 40,
+		"damage": 20,
 		"variableName": "Sword"
 	}
 ]
