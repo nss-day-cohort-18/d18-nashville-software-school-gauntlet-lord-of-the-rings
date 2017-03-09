@@ -6,7 +6,7 @@ app.factory("WeaponFactory", function(LOTR) {
 
 	LOTR.Weapons.Weapon = function() {
 		this.name = "";
-		this.damage = 10;
+		this.damage = Math.floor(Math.random() * 5);
 
 		this.toString = function() {
     	return this.name + " for " + this.damage + " damage!";
@@ -14,13 +14,18 @@ app.factory("WeaponFactory", function(LOTR) {
 	};
 
 
-	LOTR.Weapons.Dagger = function() {
-	  this.name = "dagger";
-	  this.damage = Math.floor(Math.random() * 5);
+	let createWeapons = (customWeapon) => {
+		return new Promise((resolve, reject) => {
+			LOTR.Weapons[customWeapon.variableName] = function() {
+				this.name = customWeapon.name;
+				this.damage = this.damage + customWeapon.damage;
+			};
+			LOTR.Weapons[customWeapon.variableName].prototype = new LOTR.Weapons.Weapon();
+			resolve(LOTR.Weapons);
+		});
 	};
-	LOTR.Weapons.Dagger.prototype = new LOTR.Weapons.Weapon();
 
 
-	return (LOTR.Weapons);
+	return {createWeapons};
 
 });
