@@ -5,8 +5,8 @@ console.log("CurrentStateFactory.js is connected");
 app.factory("CurrentStateFactory", function() {
 
 	let myStatus = {
-		myCurrentLevel: {number: 0,
-						 message: "You're not in The Shire Anymore! 3 Orcs Have Tracked you down at the Prancing Pony!"},
+		myCurrentLevel: 0,
+		message: ["You're not in The Shire Anymore! 3 Orcs Have Tracked you down at the Prancing Pony!"],
 		myCurrentHero: null,
 		myCurrentEnemy: null,
 		myCurrentMonsters: null,

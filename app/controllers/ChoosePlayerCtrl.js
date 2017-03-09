@@ -9,41 +9,29 @@ app.controller("ChoosePlayerCtrl", function($scope, CurrentStateFactory, LevelsF
 	//get level info:
 
 	s.level = CurrentStateFactory.getCurrentStatus().myCurrentLevel;
-	// console.log('s.level:', s.level);
-	s.levelMessage = CurrentStateFactory.getCurrentStatus().myCurrentLevel.message;
-	// console.log('s.levelMessage:', s.levelMessage);
+	s.levelMessage = CurrentStateFactory.getCurrentStatus().message[s.level];
 
-	let levelInfo = LevelsFactory.getLevels(s.level.number),
-	// console.log('levelInfo:', levelInfo);
+	let levelInfo = LevelsFactory.getLevels(s.level),
+		monsters = levelInfo.levelCharacters.Monsters,
+		fellows = levelInfo.levelCharacters.Fellowship,
 
-
-	 monsters = levelInfo.levelCharacters.Monsters,
-	// console.log('monsters:', monsters);
-	 fellows = levelInfo.levelCharacters.Fellowship,
-	// console.log('fellows:', fellows);
-
-
-	//set enemy and fellowship
+	 //set enemy and fellowship
      CurrentMonsters = CurrentStateFactory.setCurrentStatus('myCurrentMonsters', monsters),
-    // console.log('myCurrentMonsters set to:', CurrentMonsters);
      CurrentFellowship = CurrentStateFactory.setCurrentStatus('myCurrentFellowship', fellows);
-    // console.log('myCurrentFellowship set to:', CurrentFellowship);
 
     //instantiate new fellows
 	s.fellowship = fellows.map((fellow)=> new LOTR.Combatants.Fellowship[fellow]());
-	// console.log('fellowship objectified:', s.fellowship);
 
-
-    //send forth:
+    //send forth player (set current hero, fighting status)
     s.sendForth = function(fellow){
-    	console.log('sent Forth:', fellow);
     	CurrentStateFactory.setCurrentStatus('myCurrentHero', fellow);
     	let currentHero = CurrentStateFactory.getCurrentStatus().myCurrentHero;
-    	// console.log('current hero set to:', currentHero);
     	CurrentStateFactory.setFightingStatus(true);
-    	// let isFighting = CurrentStateFactory.getFightingStatus();
-    	// console.log('is fighting?', isFighting);
     };
+
+
+
+
 
 
 
