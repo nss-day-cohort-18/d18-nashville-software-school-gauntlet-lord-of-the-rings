@@ -1,0 +1,12 @@
+[
+	{
+		"name": "Frodo",
+		"health": 100,
+		"variableName": "Frodo"
+	},
+	{
+		"name": "Gimli",
+		"health": 150,
+		"variableName": "Dwarf"
+	}
+]

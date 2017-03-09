@@ -33,9 +33,30 @@ app.config(function($routeProvider, $locationProvider) {
 		.otherwise('/Welcome');
 });
 
-app.run(($location, LOTR) => {
-	console.log("Here is Gauntlet app");
-	console.log("And here is your LOTR obj: ", LOTR);
+app.run(($location, $http, LOTR, MonsterFactory, FellowshipFactory, WeaponFactory) => {
+
+	let mySheeeeyit = [
+
+		$http.get("../appComponents/Weapons.json")
+	            .then(
+	            	(WeaponData) => Promise.all(WeaponData.data.map((Weapons) => WeaponFactory.createWeapons(Weapons)))
+	            	),
+	
+		$http.get("../appComponents/Fellowship.json")
+	            .then(
+	            	(HeroData) => Promise.all(HeroData.data.map((Hero) => FellowshipFactory.createFellowship(Hero)))
+	            	),
+
+		$http.get("../appComponents/Monsters.json")
+	            .then(
+	            	(MonsterData) => Promise.all(MonsterData.data.map((Monster) => MonsterFactory.createMonsters(Monster)))
+	            		),
+
+	];
+
+	Promise.all(mySheeeeyit).then((theShit) => console.log("Done: ", theShit));
+
+
 });
 
 
