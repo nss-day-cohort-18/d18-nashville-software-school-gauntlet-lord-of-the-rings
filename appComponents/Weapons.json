@@ -1,7 +1,52 @@
 [
 	{
+		"name": "Sting",
+		"damage": 40,
+		"variableName": "Sting"
+	},
+	{
+		"name": "Narsil",
+		"damage": 40,
+		"variableName": "Narsil"
+	},
+	{
+		"name": "Bow",
+		"damage": 40,
+		"variableName": "Bow"
+	},
+	{
+		"name": "Battle Axe",
+		"damage": 40,
+		"variableName": "BattleAxe"
+	},
+	{
+		"name": "Wizard Staff",
+		"damage": 40,
+		"variableName": "WizardStaff"
+	},
+	{
 		"name": "Dagger",
 		"damage": 40,
 		"variableName": "Dagger"
+	},
+	{
+		"name": "Teeth",
+		"damage": 40,
+		"variableName": "Teeth"
+	},
+	{
+		"name": "Giant Spear",
+		"damage": 40,
+		"variableName": "GiantSpear"
+	},
+	{
+		"name": "Two handed Sword",
+		"damage": 40,
+		"variableName": "TwoHandedSword"
+	},
+	{
+		"name": "Sword",
+		"damage": 40,
+		"variableName": "Sword"
 	}
 ]

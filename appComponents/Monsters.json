@@ -1,12 +1,38 @@
 [
 	{
-		"name": "Black Rider",
-		"health": 40,
-		"variableName": "BlackRider"
+		"name": "Ringraiths",
+		"health": 50,
+		"variableName": "Ringraiths",
+		"weapon": "TwoHendedSword"
 	},
 	{
 		"name": "Orc",
 		"health": 20,
-		"variableName": "Orc"
+		"variableName": "Orc",
+		"weapon": "Sword"
+	},
+	{
+		"name": "Cave Troll",
+		"health": 70,
+		"variableName": "CaveTroll",
+		"weapon": "GiantSpear"
+	},
+	{
+		"name": "Uruk-hai",
+		"health": 65,
+		"variableName": "Uruk-hai",
+		"weapon": "TwoHendedSword"
+	},
+	{
+		"name": "Smeagol",
+		"health": 100,
+		"variableName": "Smeagol",
+		"weapon": "Teeth"
+	},
+	{
+		"name": "Saruman",
+		"health": 200,
+		"variableName": "Saruman",
+		"weapon": "WizardStaff"
 	}
 ]
