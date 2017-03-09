@@ -6,16 +6,16 @@ app.factory("LevelsFactory", function() {
 
 	let levels = [
 		{																												//Level 1 Characters
-			Fellowship: ['Frodo', 'Sam'],																	
-			Monsters: ['Orc', 'Orc', 'Orc', 'BlackRider']
+			Fellowship: 	['Frodo', 'Sam'],																	
+			Monsters: 		['Orc', 'Orc', 'Orc', 'BlackRider']
 		},
 		{																												//Level 2 Characters
-			Fellowship: ['Gimli', 'Legolas', 'Aragorn', 'Galdalf'],
-			Monsters: ['Orc', 'Orc', 'Troll', 'Urukhai', 'Dragon']
+			Fellowship: 	['Gimli', 'Legolas', 'Aragorn', 'Galdalf'],
+			Monsters: 		['Orc', 'Orc', 'Troll', 'Urukhai', 'Dragon']
 		},
 		{																												//Level 3 Characters
-			Fellowship: [],																								
-			Monsters: ['Smeagol']
+			Fellowship: 	[],																								
+			Monsters: 		['Smeagol']
 		}
 	];
 
