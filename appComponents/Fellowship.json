@@ -2,12 +2,38 @@
 	{
 		"name": "Frodo",
 		"health": 100,
-		"variableName": "Frodo"
+		"variableName": "Frodo",
+		"weapon": "Sting"
 		
+	},
+	{
+		"name": "Sam",
+		"health": 100,
+		"variableName": "Sam",
+		"weapon": "Dagger"
+	},
+	{
+		"name": "Gandalf",
+		"health": 200,
+		"variableName": "Gandalf",
+		"weapon": "Wizard Staff"
+	},
+	{
+		"name": "Aragorn",
+		"health": 170,
+		"variableName": "Aragorn",
+		"weapon": "Narsil"
+	},
+	{
+		"name": "Legolas",
+		"health": 170,
+		"variableName": "Legolas",
+		"weapon": "Bow"
 	},
 	{
 		"name": "Gimli",
 		"health": 150,
-		"variableName": "Gimli"
+		"variableName": "Gimli",
+		"weapon": "Battle Axe"
 	}
 ]
