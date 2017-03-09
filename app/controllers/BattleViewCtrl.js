@@ -4,9 +4,11 @@ console.log("BattleViewCtrl.js is connected!!");
 
 app.controller("BattleViewCtrl", function($scope, $http, $location, $timeout, LOTR, LevelsFactory, CurrentStateFactory) {
 	let s = $scope;
-	let LevelStatus = CurrentStateFactory.getCurrentStatus();
-
 	let myCurrentStatus = CurrentStateFactory.getCurrentStatus();
+	
+	let myCurrentLevel = LevelsFactory.getLevels(myCurrentStatus.myCurrentLevel);
+
+	s.levelBackgroundImage = myCurrentLevel.backgroundImage;
 
 	s.player = myCurrentStatus.myCurrentHero;
 	s.monster = new LOTR.Combatants.Monsters[myCurrentStatus.myCurrentMonsters[0]]();	

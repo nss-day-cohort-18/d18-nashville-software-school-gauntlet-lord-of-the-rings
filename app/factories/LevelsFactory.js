@@ -23,47 +23,47 @@ app.factory("LevelsFactory", function() {
 
 	let levelDetails = [
 		{ 
-			image: 	  'levelOne.jpg',
+			image: 	  '../images/backgrounds/levelOne.jpg',
 			message:  'ONE DOES NOT SIMPLY WALK INTO MORDOR.'
 		},
 		{ 
-			image: 	  'levelTwo.jpg',
+			image: 	  '../images/backgrounds/levelTwo.jpg',
 			message:  'THERES SOME GOOD IN THIS WORLD, MR. FRODO...AND THATS WORTH FIGHTING FOR.'
 		},
 		{ 
-			image: 	  'levelThree.jpg',
+			image: 	  '../images/backgrounds/levelThree.jpg',
 			message:  'A DAY MAY COME WHEN THE COURAGE OF MEN FAILS...BUT NOT THIS DAY.'
 		},
 		{ 
-			image: 	  'levelFour.jpg',
+			image: 	  '../images/backgrounds/levelFour.jpg',
 			message:  'THERE IS SOME GOOD IN THIS WORLD, MR. FRODO, AND ITS WORTH FIGTHING FOR.'
 		},
 		{
-			image: 	  'levelFive.jpg',
+			image: 	  '../images/backgrounds/levelFive.jpg',
 			message:  'NOT ALL THOSE WHO WANDER ARE LOST.'
 		},
 		{
-			image: 	  'levelSix.jpg',
+			image: 	  '../images/backgrounds/levelSix.jpg',
 			message:  'EVEN THE SMALLEST PERSON CAN CHANGE THE COURSE OF THE FUTURE.'
 		},
 		{
-			image: 	  'levelSeven.jpg',
+			image: 	  '../images/backgrounds/levelSeven.jpg',
 			message:  'BE A WARRIOR NOT A WORRIER.'
 		},
 		{
-			image: 	  'levelEight.jpg',
+			image: 	  '../images/backgrounds/levelEight.jpg',
 			message:  'YOUR TIME WILL COME. YOU WILL FACE THE SAME EVIL, AND YOU WILL DEFEAT IT.'
 		},
 		{
-			image: 	  'levelEight.jpg',
+			image: 	  '../images/backgrounds/levelEight.jpg',
 			message:  'THE RING HAS AWOKEN, IT’S HEARD ITS MASTERS CALL.'
 		},
 		{
-			image: 	  'levelNine.jpg',
+			image: 	  '../images/backgrounds/levelNine.jpg',
 			message:  'THE BOARD IS SET, THE PIECES ARE MOVING. WE COME TO IT AT LAST, THE GREAT BATTLE OF OUR TIME.'
 		},
 		{
-			image: 	  'levelTen.jpg',
+			image: 	  '../images/backgrounds/levelTen.jpg',
 			message:  'HOME IS NOW BEHIND YOU, THE WORLD IS AHEAD.'
 		}
 	];

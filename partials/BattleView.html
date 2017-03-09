@@ -1,53 +1,54 @@
 
 <!-- battleview -->
-<div ng-control="BattleViewCtrl" class="container" ng-style="{'background-image':'url(../images/backgrounds/prancingPony.png)'}">
-
-  <!-- fellowship player and opponent faceoff -->
-  <div class="row">
-  <!-- left column start -->
-    <div class="col-sm-5 col-md-5 battle-player">
-    <!-- progress bar -->
-    <div class="progress">
-      <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-        <span class="sr-only">60% Complete</span>
-      </div>
-    </div>
-    <!-- player card -->
-      <div class="thumbnail battle-description">
-        <img ng-src="{{ player.img }}" alt="{{ player.name }}">
-        <div class="caption">
-          <h3>{{ player.name }}</h3>
-          <p>{{ player.health }}</p>
-          <p>{{ player.strength }}</p>
-          <p>{{ player.weapon }}</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-2 col-md-2 battle-button">
-      <button id="singlebutton" name="singlebutton" class="btn btn-primary" ng-click="attack()"> Attack! </button>         
-    </div>
-
-    <!-- right column start -->
-    <div class="col-sm-5 col-md-5 battle-player">
+<div ng-control="BattleViewCtrl" class="container-fluid" ng-style="{'background-image':'url({{ levelBackgroundImage }})'}">
+  <div class="container">
+    <!-- fellowship player and opponent faceoff -->
+    <div class="row">
+    <!-- left column start -->
+      <div class="col-sm-5 col-md-5 battle-player">
       <!-- progress bar -->
       <div class="progress">
         <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
           <span class="sr-only">60% Complete</span>
-        </div> 
+        </div>
       </div>
-      <!-- enemy card -->
-      <div class="thumbnail battle-description">
-        <img ng-src="{{ monster.img }}" alt="{{ monster.img }}">
-        <div class="caption">
-          <h3>{{ monster.name }}</h3>
-          <p>{{ monster.health }}</p>
-          <p>{{ monster.strength }}</p>
-          <p>{{ monster.weapon }}</p>
+      <!-- player card -->
+        <div class="thumbnail battle-description">
+          <img ng-src="{{ player.img }}" alt="{{ player.name }}">
+          <div class="caption">
+            <h3>{{ player.name }}</h3>
+            <p>{{ player.health }}</p>
+            <p>{{ player.strength }}</p>
+            <p>{{ player.weapon }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-2 col-md-2 battle-button">
+        <button id="singlebutton" name="singlebutton" class="btn btn-primary" ng-click="attack()"> Attack! </button>         
+      </div>
+
+      <!-- right column start -->
+      <div class="col-sm-5 col-md-5 battle-player">
+        <!-- progress bar -->
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+            <span class="sr-only">60% Complete</span>
+          </div> 
+        </div>
+        <!-- enemy card -->
+        <div class="thumbnail battle-description">
+          <img ng-src="{{ monster.img }}" alt="{{ monster.img }}">
+          <div class="caption">
+            <h3>{{ monster.name }}</h3>
+            <p>{{ monster.health }}</p>
+            <p>{{ monster.strength }}</p>
+            <p>{{ monster.weapon }}</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </div>  
 </div>
 
 
