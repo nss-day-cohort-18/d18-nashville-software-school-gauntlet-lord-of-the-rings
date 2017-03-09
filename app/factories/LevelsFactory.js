@@ -11,7 +11,7 @@ app.factory("LevelsFactory", function() {
 	];
 
 	let levelBackground = [
-			'levelOne.jpeg',
+			'levelOne.jpg',
 			'levelTwo.jpg',
 			'levelThree.jpg',
 			'levelFour.jpg',
