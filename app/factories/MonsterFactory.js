@@ -8,8 +8,8 @@ app.factory("MonsterFactory", function(LOTR) {
 		this.name = "";
 		this.health = "";
 		this.toString = function() {
-   //  	return "My name is " + this.name + " and I have  " + this.health + " health!";
-  	// };
+    	return "My name is " + this.name + " and I have  " + this.health + " health!";
+  	};
 	};
 
 	let createMonsters = (customMonster) => {

@@ -6,6 +6,7 @@ app.controller("ChoosePlayerCtrl", function($scope, CurrentStateFactory, LevelsF
 	
 	let s = $scope;
 
+
 	//get level info:
 
 	s.level = CurrentStateFactory.getCurrentStatus().myCurrentLevel;
@@ -28,14 +29,5 @@ app.controller("ChoosePlayerCtrl", function($scope, CurrentStateFactory, LevelsF
     	let currentHero = CurrentStateFactory.getCurrentStatus().myCurrentHero;
     	CurrentStateFactory.setFightingStatus(true);
     };
-
-
-
-
-
-
-
-
-
 		
 });
