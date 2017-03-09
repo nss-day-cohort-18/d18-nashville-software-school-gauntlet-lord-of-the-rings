@@ -1,23 +1,23 @@
   
 <!-- choose player view -->
   <div ng-control="ChoosePlayerCtrl" class="jumbotron">
-    <h1>{{ level }}</h1>
-    <p>{{ level.message }}</p>
+    <h1>You've Reached Level {{ level.number }}!</h1>
+    <p>{{ levelMessage }}</p>
   </div>
 
   <h2>Who shall you send forth to battle?</h2>
 
-  <div class="row" ng-repeat="player in players">
+  <div class="row" ng-repeat="fellow in fellowship">
   <!-- card -->
     <div class="col-sm-6 col-md-4">
       <div class="thumbnail">
-        <img ng-src="{{ player.img }}" alt="{{ player.name }}">
+        <img ng-src="{{ fellow.img }}" alt="{{ fellow.name }}">
         <div class="caption">
-          <h3>{{ player.name }}</h3>
-          <p>{{ player.health }}</p>
-          <p>{{ player.strength }}</p>
-          <p>{{ player.weapon }}</p>
-          <p><a href="#" class="btn btn-success" role="button">Send Forth!</a></p>
+          <h3>{{ fellow.name }}</h3>
+          <p>Health: {{ fellow.health }}</p>
+          <!-- <p>{{ fellow.strength }}</p> -->
+          <p>Weapon: {{ fellow.weapon }}</p>
+          <p><a ng-href="#!/BattleView" ng-click="sendForth(fellow)" class="btn btn-success" role="button">Send Forth!</a></p>
         </div>
       </div>
     </div> 

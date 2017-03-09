@@ -10,7 +10,7 @@ app.factory("LevelsFactory", function() {
 			Monsters: 		['Orc', 'Orc', 'Orc', 'BlackRider']
 		},
 		{																												//Level 2 Characters
-			Fellowship: 	['Gimli', 'Legolas', 'Aragorn', 'Galdalf'],
+			Fellowship: 	['Gimli', 'Legolas', 'Aragorn', 'Gandalf'],
 			Monsters: 		['Orc', 'Orc', 'Troll', 'Urukhai', 'Dragon']
 		},
 		{																												//Level 3 Characters
