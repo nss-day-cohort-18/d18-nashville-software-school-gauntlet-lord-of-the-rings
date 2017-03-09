@@ -4,6 +4,8 @@ console.log("CurrentStateFactory.js is connected");
 
 app.factory("CurrentStateFactory", function() {
 
+
+
 	let myStatus = {
 		myCurrentLevel: 0,
 		myCurrentHero: null,
@@ -16,9 +18,15 @@ app.factory("CurrentStateFactory", function() {
 	let getCurrentStatus = () => myStatus;
 	let	setCurrentStatus = ( myStatusKey, myStatusValue ) => myStatus[myStatusKey] = myStatusValue;
 
+	let killMonster = () => {
+		myStatus.myCurrentMonsters.splice(0, 1);
+		return myStatus.myCurrentMonsters;
+	};
+
 	return {
 		getCurrentStatus,
-		setCurrentStatus
+		setCurrentStatus,
+		killMonster
 	};
 
 });

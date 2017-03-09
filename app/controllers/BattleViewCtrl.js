@@ -2,21 +2,82 @@
 
 console.log("BattleViewCtrl.js is connected!!");
 
-app.controller("BattleViewCtrl", function($scope, $http, LOTR, LevelsFactory, CurrentStateFactory) {
+app.controller("BattleViewCtrl", function($scope, $http, $location, $timeout, LOTR, LevelsFactory, CurrentStateFactory) {
 	let s = $scope;
+	let LevelStatus = CurrentStateFactory.getCurrentStatus();
 
-	let currentLevel = LevelsFactory.getLevels(1);
-	console.log("Here is your currentLevel info: ", currentLevel);
+	let myPlayer = {
+		name: "player",
+		health: 50,
+		weapon: {
+			name: "Dagger",
+			damage: 10
+		}
+	};
 
-	let myCurrentCharacters = currentLevel.levelCharacters;
-	console.log("Here is your myCurrentEnemies info: ", myCurrentCharacters);
+	let myMonster = {
+		name: "monster",
+		health: 50,
+		weapon: {
+			name: "Axe",
+			damage: 10
+		}
+	};
 
-	let myCurrentEnemies = myCurrentCharacters.Monsters;
+	s.player = myPlayer;
+	s.monster = myMonster;	
+	// s.monster = new LOTR.Combatants.Monsters[LevelStatus.myCurrentMonsters[0]]();
 
-	let myWeapon = new LOTR.Weapons.Dagger();
-	console.log("Here is myWeapon: ", myWeapon);
+	let currentLevel = LevelStatus.myCurrentLevel;
+			// playerWeapon 		= new LOTR.Weapons[s.player.weapon](),
+			// monsterWeapon 	= new LOTR.Weapons[s.monster.weapon]();
+			
+	console.log("Here is your currentLevel info: ", LevelStatus);
 
-	let myMonster = new LOTR.Combatants.Monsters[myCurrentEnemies[0]]();
-	console.log("Here is myMonster: ", myMonster);
+	s.attack = () => {
+		console.log("You are attacking");
+		if (s.monster.health - s.player.weapon.damage <= 0) {
+			s.monster.health = 0;
+			console.log("Your monster is supposed to be dead.");
+			// $location.path('/Summry');
+		} else {
+			s.monster.health -= s.player.weapon.damage;
+			console.log("Here is your monster's health: ", s.monster.health);
+			$timeout(function() {
+				if (s.player.health - s.monster.weapon.damage <= 0) {
+					s.player.health = 0;
+					console.log("Your player is supposed to be dead: ", s.player.health);
+				} else {
+					s.player.health -= s.monster.weapon.damage;
+					console.log("Here is your player's health: ", s.player.health);
+				}
+			}, 1000);
+		}
+	};
+
+	
 		
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

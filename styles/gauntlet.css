@@ -2,6 +2,25 @@
   border-radius: 0 !important;
 }
 
-.row {
-  margin: auto;
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, li, ul, ol, a, p {
+	margin: 0;
+	padding: 0;
+} 
+
+.battle-player {
+	margin-top: 4em;
+}
+
+.battle-button {
+	margin-top: 20em;
+	text-align: center;
+}
+
+.battle-description {
+	min-height: 600px;
 }
