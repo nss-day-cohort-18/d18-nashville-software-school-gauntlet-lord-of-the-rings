@@ -8,8 +8,10 @@ app.controller("BattleViewCtrl", function($scope, $http, LOTR, LevelsFactory, Cu
 	let currentLevel = LevelsFactory.getLevels(1);
 	console.log("Here is your currentLevel info: ", currentLevel);
 
-	let myCurrentEnemies = currentLevel.levelEnemies;
-	console.log("Here is your myCurrentEnemies info: ", myCurrentEnemies);
+	let myCurrentCharacters = currentLevel.levelCharacters;
+	console.log("Here is your myCurrentEnemies info: ", myCurrentCharacters);
+
+	let myCurrentEnemies = myCurrentCharacters.Monsters;
 
 	let myWeapon = new LOTR.Weapons.Dagger();
 	console.log("Here is myWeapon: ", myWeapon);
