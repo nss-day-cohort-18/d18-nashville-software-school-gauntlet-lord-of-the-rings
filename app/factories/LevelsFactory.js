@@ -5,9 +5,18 @@ console.log("LevelsFactory.js is connected");
 app.factory("LevelsFactory", function() {
 
 	let levels = [
-			['Orc', 'Orc', 'Orc'],
-			['BlackRider', 'Orc', 'BlackRider'],
-			['Orc', 'BlackRider', 'Orc', 'Troll']
+		{																										//Level 1 Characters
+			['Frodo', 'Sam'],																	
+			['Orc', 'Orc', 'Orc', 'BlackRider']
+		},
+		{																										//Level 2 Characters
+			['Gimli', 'Legolas', 'Aragorn', 'Galdalf'],
+			['Orc', 'Orc', 'Troll', 'Urukhai', 'Dragon']
+		},
+		{																										//Level 3 Characters
+			[],																								
+			['Smeagol']
+		}
 	];
 
 	let levelBackground = [
@@ -25,7 +34,7 @@ app.factory("LevelsFactory", function() {
 
 	let getLevels = (levelValue) => {
 		let myCurrentLevel = {};
-		myCurrentLevel.levelEnemies = levels[levelValue];
+		myCurrentLevel.levelCharacters = levels[levelValue];
 		myCurrentLevel.backgroundImage = levelBackground[levelValue];
 		return myCurrentLevel;
 	};
