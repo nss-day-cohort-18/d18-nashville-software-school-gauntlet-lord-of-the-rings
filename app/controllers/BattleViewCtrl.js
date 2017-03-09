@@ -6,27 +6,18 @@ app.controller("BattleViewCtrl", function($scope, $http, $location, $timeout, LO
 	let s = $scope;
 	let LevelStatus = CurrentStateFactory.getCurrentStatus();
 
-	let myPlayer = {
-		name: "player",
-		health: 50,
-		weapon: {
-			name: "Dagger",
-			damage: 10
-		}
-	};
+	let myCurrentStatus = CurrentStateFactory.getCurrentStatus();
 
-	let myMonster = {
-		name: "monster",
-		health: 50,
-		weapon: {
-			name: "Axe",
-			damage: 20
-		}
-	};
+	s.player = myCurrentStatus.myCurrentHero;
+	s.monster = new LOTR.Combatants.Monsters[myCurrentStatus.myCurrentMonsters[0]]();	
 
-	s.player = myPlayer;
-	s.monster = myMonster;	
-	// s.monster = new LOTR.Combatants.Monsters[LevelStatus.myCurrentMonsters[0]]();
+	let myMonstersWeapon = new LOTR.Weapons[s.monster.weapon]();
+	let myPlayerWeapon = new LOTR.Weapons[s.player.weapon]();	
+
+	s.player.weapon = myPlayerWeapon;
+	s.monster.weapon = myMonstersWeapon;
+
+	console.log("Here are my Combatants: ", s.player, s.monster);
 
 	let currentLevel = LevelStatus.myCurrentLevel;
 			// playerWeapon 		= new LOTR.Weapons[s.player.weapon](),
@@ -38,7 +29,14 @@ app.controller("BattleViewCtrl", function($scope, $http, $location, $timeout, LO
 		console.log("You are attacking");
 		if (s.monster.health - s.player.weapon.damage <= 0) {
 			s.monster.health = 0;
-			console.log("Your monster is supposed to be dead.");
+			let myMonsterArray = CurrentStateFactory.killMonster();
+			console.log(myMonsterArray);
+			s.monster = new LOTR.Combatants.Monsters[myMonsterArray[0]]();
+			s.monster.weapon = new LOTR.Weapons[s.monster.weapon]();
+			if (myMonsterArray.length === 0) {
+				alert("You just beat all the monsters");
+				console.log("Your monster is supposed to be dead.");
+			}
 			// $location.path('/Summry');
 		} else {
 			s.monster.health -= s.player.weapon.damage;

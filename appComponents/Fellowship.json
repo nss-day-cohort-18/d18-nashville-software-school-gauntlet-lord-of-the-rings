@@ -3,7 +3,8 @@
 		"name": "Frodo",
 		"health": 100,
 		"variableName": "Frodo",
-		"weapon": "Sting"
+		"weapon": "Sting",
+		"img": ""
 		
 	},
 	{

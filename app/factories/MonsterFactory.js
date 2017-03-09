@@ -6,7 +6,7 @@ app.factory("MonsterFactory", function(LOTR) {
 
 	LOTR.Combatants.Monsters.Monster = function() {
 		this.name = "";
-		this.health = 10;
+		this.health = "";
 		this.toString = function() {
     	return "My name is " + this.name + " and I have  " + this.health + " health!";
   	};
