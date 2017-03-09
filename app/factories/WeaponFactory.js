@@ -25,17 +25,6 @@ app.factory("WeaponFactory", function(LOTR) {
 		});
 	};
 
-	// let createMonsters = (customMonster) => {
-	// 	return new Promise((resolve, reject) => {
-	// 		LOTR.Combatants.Monsters[customMonster.variableName] = function() {
-	// 			this.name = customMonster.name;
-	// 			this.health = this.health + customMonster.health;
-	// 		};
-	// 		LOTR.Combatants.Monsters[customMonster.variableName].prototype = new LOTR.Combatants.Monsters.Monster();
-	// 		resolve(LOTR.Combatants.Monsters);
-	// 	});
-	// };
-
 
 	return {createWeapons};
 

@@ -2,7 +2,7 @@
 
 console.log("BattleViewCtrl.js is connected!!");
 
-app.controller("BattleViewCtrl", function($scope, $http, LOTR, LevelsFactory) {
+app.controller("BattleViewCtrl", function($scope, $http, LOTR, LevelsFactory, CurrentStateFactory) {
 	let s = $scope;
 
 	let currentLevel = LevelsFactory.getLevels(1);
