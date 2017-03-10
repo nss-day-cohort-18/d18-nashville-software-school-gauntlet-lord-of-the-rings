@@ -7,9 +7,9 @@
 
   <h2>Who shall you send forth to battle?</h2>
 
-  <div class="row" ng-repeat="fellow in fellowship">
+  <div class="row">
   <!-- card -->
-    <div class="col-sm-6 col-md-4">
+    <div class="col-sm-6 col-md-4" ng-repeat="fellow in fellowship">
       <div class="thumbnail">
         <img ng-src="/images/sprites/GoodGuys/{{ fellow.img }}" alt="{{ fellow.name }}">
         <div class="caption">
