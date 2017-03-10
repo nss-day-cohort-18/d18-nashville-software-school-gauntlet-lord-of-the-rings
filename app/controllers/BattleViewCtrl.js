@@ -21,11 +21,11 @@ app.controller("BattleViewCtrl", function($scope, $http, $location, $timeout, LO
 
 	console.log("Here are my Combatants: ", s.player, s.monster);
 
-	let currentLevel = LevelStatus.myCurrentLevel;
+	//let currentLevel = LevelStatus.myCurrentLevel;
 			// playerWeapon 		= new LOTR.Weapons[s.player.weapon](),
 			// monsterWeapon 	= new LOTR.Weapons[s.monster.weapon]();
 			
-	console.log("Here is your currentLevel info: ", LevelStatus);
+	//console.log("Here is your currentLevel info: ", LevelStatus);
 
 	s.attack = () => {
 		console.log("You are attacking");
