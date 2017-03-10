@@ -10,24 +10,43 @@ app.controller("ChoosePlayerCtrl", function($scope, CurrentStateFactory, LevelsF
 	//get level info:
 
 	s.level = CurrentStateFactory.getCurrentStatus().myCurrentLevel;
-	s.levelMessage = CurrentStateFactory.getCurrentStatus().message[s.level];
 
 	let levelInfo = LevelsFactory.getLevels(s.level),
-		monsters = levelInfo.levelCharacters.Monsters,
-		fellows = levelInfo.levelCharacters.Fellowship,
+			monsters = levelInfo.levelCharacters.Monsters.map((monster) => {
+									monster = new LOTR.Combatants.Monsters[monster]();
+									let monsterWeapon = new LOTR.Weapons[monster.weapon]();
+									monster.weapon = monsterWeapon;
+									return monster;
+			}),
+			fellows = levelInfo.levelCharacters.Fellowship.map((fellow) => {
+									fellow = new LOTR.Combatants.Fellowship[fellow]();
+									let fellowWeapon = new LOTR.Weapons[fellow.weapon]();
+									fellow.weapon = fellowWeapon;
+									return fellow;
+			});
 
-	 //set enemy and fellowship
-     CurrentMonsters = CurrentStateFactory.setCurrentStatus('myCurrentMonsters', monsters),
-     CurrentFellowship = CurrentStateFactory.setCurrentStatus('myCurrentFellowship', fellows);
+	console.log("Here is your level info: ", levelInfo);
 
-    //instantiate new fellows
-	s.fellowship = fellows.map((fellow)=> new LOTR.Combatants.Fellowship[fellow]());
+	//set enemy and fellowship
+	CurrentStateFactory.setCurrentStatus('myCurrentMonsters', monsters);
+	CurrentStateFactory.setCurrentStatus('myCurrentFellowship', fellows);
 
-    //send forth player (set current hero, fighting status)
-    s.sendForth = function(fellow){
-    	CurrentStateFactory.setCurrentStatus('myCurrentHero', fellow);
-    	let currentHero = CurrentStateFactory.getCurrentStatus().myCurrentHero;
-    	CurrentStateFactory.setFightingStatus(true);
-    };
+	let myLevelStats = CurrentStateFactory.getCurrentStatus();
+	s.levelMessage = levelInfo.levelDetails.message;
+  //instantiate new fellows
+	s.fellowship = myLevelStats.myCurrentFellowship;
+	// .map((fellow)=> new LOTR.Combatants.Fellowship[fellow]());
+
+  //send forth player (set current hero, fighting status)
+  s.sendForth = function(fellow){
+  	CurrentStateFactory.setCurrentStatus('myCurrentHero', fellow);
+  	CurrentStateFactory.sendOffHero(fellow);
+  	CurrentStateFactory.setFightingStatus(true);
+  };
 		
 });
+
+
+
+
+

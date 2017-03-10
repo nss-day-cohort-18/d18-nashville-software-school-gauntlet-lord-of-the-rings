@@ -16,7 +16,7 @@
 		"name": "Gandalf",
 		"health": 200,
 		"variableName": "Gandalf",
-		"weapon": "Wizard Staff"
+		"weapon": "WizardStaff"
 	},
 	{
 		"name": "Aragorn",
@@ -34,6 +34,6 @@
 		"name": "Gimli",
 		"health": 150,
 		"variableName": "Gimli",
-		"weapon": "Battle Axe"
+		"weapon": "BattleAxe"
 	}
 ]

@@ -11,12 +11,11 @@ app.factory("LevelsFactory", function() {
 		},
 		{																												//Level 2 Characters
 
-			
-			Fellowship: 	['Gimli', 'Legolas', 'Aragorn', 'Galdalf','Frodo'],
-			Monsters: 		['Orc', 'Orc', 'Cave Troll', 'Uruk-hai', 'Fellbeast']
+			Fellowship: 	['Gimli', 'Legolas', 'Aragorn', 'Gandalf'],
+			Monsters: 		['Orc', 'Orc', 'CaveTroll', 'Urukhai', 'Fellbeast']
 		},
 		{																												//Level 3 Characters
-			Fellowship: 	['Frodo'],																								
+			Fellowship: 	[],																								
 			Monsters: 		['Smeagol']
 		}
 	];
@@ -71,7 +70,7 @@ app.factory("LevelsFactory", function() {
 	let getLevels = (levelValue) => {
 		let myCurrentLevel = {};
 		myCurrentLevel.levelCharacters = levels[levelValue];
-		myCurrentLevel.backgroundImage = levelDetails[levelValue];
+		myCurrentLevel.levelDetails = levelDetails[levelValue];
 		return myCurrentLevel;
 	};
 
