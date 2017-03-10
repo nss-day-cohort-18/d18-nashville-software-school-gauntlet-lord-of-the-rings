@@ -44,6 +44,6 @@
 		"name": "Fellbeast",
 		"health": 200,
 		"variableName": "Fellbeast",
-		"weapon": "DragonTeeth"
+		"weapon": "DragonTeeth",
 	}
 ]
