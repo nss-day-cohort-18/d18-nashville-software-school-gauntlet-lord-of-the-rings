@@ -14,13 +14,14 @@
       </div>
       <!-- player card -->
         <div class="thumbnail battle-description">
+          
           <div class="caption battle-caption"> 
             <h3>Player Name: {{ player.name }}</h3>
             <p>Player Health: {{ player.health }}</p>
             <p>Player strength: {{ player.weapon.damage }}</p>
             <p>Player's Weapon: {{ player.weapon.name }}</p>
           </div>
-          <img ng-src="{{ player.img }}" alt="{{ player.name }}" class="battle-img">
+          <img ng-src="images/sprites/GoodGuys/{{player.img}}" alt="{{ player.name }}" class="battle-img">
         </div>
       </div>
 
@@ -37,6 +38,7 @@
         </div>
         <!-- enemy card -->
         <div class="thumbnail battle-description">
+
           <div class="caption battle-caption">
             <h3>Monster Name: {{ monster.name }}</h3>
             <p>Monster Health: {{ monster.health }}</p>
@@ -44,7 +46,7 @@
             <p> Monster's Weapon: {{ monster.weapon }}</p>
 
           </div>
-          <img ng-src="{{ monster.img }}" alt="{{ monster.img }}" class="battle-img">
+          <img ng-src="images/sprites/BadGuys/{{ monster.img }}" alt="{{ monster.img }}" class="battle-img">
         </div>
       </div>
     </div>

@@ -18,6 +18,7 @@ app.factory("MonsterFactory", function(LOTR) {
 				this.name = customMonster.name;
 				this.health = this.health + customMonster.health;
 				this.weapon = customMonster.weapon; 
+				this.img = customMonster.img;
 			};
 			LOTR.Combatants.Monsters[customMonster.variableName].prototype = new LOTR.Combatants.Monsters.Monster();
 			resolve(LOTR.Combatants.Monsters);

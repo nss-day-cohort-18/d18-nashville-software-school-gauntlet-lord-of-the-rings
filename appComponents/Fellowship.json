@@ -4,41 +4,42 @@
 		"health": 100,
 		"variableName": "Frodo",
 		"weapon": "Sting",
-		"img": "../images/sprites/GoodGuys/frodo2.png"
+		"img": "Frodo.png"
 	},
 	{
 		"name": "Sam",
 		"health": 100,
 		"variableName": "Sam",
 		"weapon": "Dagger",
-		"img": "../images/sprites/GoodGuys/Sam(Attack).png"
+		"img": "Sam.png"
 	},
 	{
 		"name": "Gandalf",
 		"health": 200,
 		"variableName": "Gandalf",
 		"weapon": "WizardStaff",
-		"img": "images/sprites/GoodGuys/frodo.png"
+		"img": "Gandalf.png"
 	},
 	{
 		"name": "Aragorn",
 		"health": 170,
 		"variableName": "Aragorn",
 		"weapon": "Narsil",
-		"img": "images/sprites/GoodGuys/frodo.png"
+		"img": "Aragorn.png"
+
 	},
 	{
 		"name": "Legolas",
 		"health": 170,
 		"variableName": "Legolas",
 		"weapon": "Bow",
-		"img": "images/sprites/GoodGuys/frodo.png"
+		"img": "legolas.jpg"
 	},
 	{
 		"name": "Gimli",
 		"health": 150,
 		"variableName": "Gimli",
 		"weapon": "BattleAxe",
-		"img": "images/sprites/GoodGuys/frodo.png"
+		"img": "Gimli.png"
 	}
 ]
