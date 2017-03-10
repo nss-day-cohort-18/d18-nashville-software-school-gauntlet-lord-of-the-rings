@@ -4,8 +4,7 @@
 		"health": 100,
 		"variableName": "Frodo",
 		"weapon": "Sting",
-		"img": ""
-		
+		"img": "/images/sprites/GoodGuys/frodo.png"
 	},
 	{
 		"name": "Sam",
