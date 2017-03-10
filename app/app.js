@@ -47,7 +47,7 @@ app.run(($location, $http, LOTR, MonsterFactory, FellowshipFactory, WeaponFactor
 	            	),
 	
 		$http.get("../appComponents/Fellowship.json")
-	            .then(
+	            .then(										//map is creating an array 
 	            	(HeroData) => Promise.all(HeroData.data.map((Hero) => FellowshipFactory.createFellowship(Hero)))
 	            	),
 
@@ -57,7 +57,7 @@ app.run(($location, $http, LOTR, MonsterFactory, FellowshipFactory, WeaponFactor
 	            		),
 
 	];
-
+						//promise all is expecting the array of promises.
 	Promise.all(mySheeeeyit).then((theShit) => console.log("Done: ", theShit));
 
 

@@ -4,14 +4,14 @@ console.log("BattleViewCtrl.js is connected!!");
 
 app.controller("BattleViewCtrl", function($scope, $http, $location, $timeout, LOTR, LevelsFactory, CurrentStateFactory) {
 	let s = $scope;
-	let myCurrentStatus 			= CurrentStateFactory.getCurrentStatus();
-	let myCurrentLevel 				= LevelsFactory.getLevels(myCurrentStatus.myCurrentLevel);
+	let myCurrentStatus = CurrentStateFactory.getCurrentStatus();
+	let myCurrentLevel = LevelsFactory.getLevels(myCurrentStatus.myCurrentLevel);
 
 	/*
 		Grab current status of the game, as well as the Level information.
 	*/
 
-	s.levelBackgroundImage 		= myCurrentLevel.levelDetails.image;
+	s.levelBackgroundImage = myCurrentLevel.levelDetails.image;
 	
 	//Initialize my characters and their weapons
 	if (myCurrentStatus.myCurrentEnemy !== null) {
@@ -20,13 +20,13 @@ app.controller("BattleViewCtrl", function($scope, $http, $location, $timeout, LO
 		CurrentStateFactory.setCurrentStatus('myCurrentEnemy', myCurrentStatus.myCurrentMonsters[0]);
 	}
 
-	s.player 									= myCurrentStatus.myCurrentHero;
-	s.monster 								= CurrentStateFactory.getCurrentStatus().myCurrentEnemy;
+	s.player = myCurrentStatus.myCurrentHero;
+	s.monster = CurrentStateFactory.getCurrentStatus().myCurrentEnemy;
 
 	console.log("Here is myCurrentStatus: ", myCurrentStatus);
 	console.log("Here are my Combatants: ", s.player, s.monster);
 
-	s.attack = () => {
+	s.attack = () => { 
 		console.log("You are attacking");
 
 

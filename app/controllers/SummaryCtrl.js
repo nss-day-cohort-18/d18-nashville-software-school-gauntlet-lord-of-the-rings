@@ -5,11 +5,11 @@ console.log("SummaryCtrl.js is connected!!");
 app.controller("SummaryCtrl", function($scope, $location, $window, LevelsFactory, CurrentStateFactory) {
 	let s = $scope;
 
-	let myCurrentStatus 			= CurrentStateFactory.getCurrentStatus();
+	let myCurrentStatus = CurrentStateFactory.getCurrentStatus();
 	s.stats = [
-		{'Level: ' 						: myCurrentStatus.myCurrentLevel+1},
-		{'Fellowship: '				: myCurrentStatus.myCurrentFellowship},
-		{'Heros Slain: '			: myCurrentStatus.herosSlain.length ? myCurrentStatus.herosSlain.length : 'None!'},
+		{'Level: ' 				: myCurrentStatus.myCurrentLevel+1},
+		{'Fellowship: '			: myCurrentStatus.myCurrentFellowship},
+		{'Heros Slain: '		: myCurrentStatus.herosSlain.length ? myCurrentStatus.herosSlain.length : 'None!'},
 		{'Monsters Slain: '		: myCurrentStatus.monstersSlain.length ? myCurrentStatus.monstersSlain.length : 'None!'},
 		{'My Current Hero: '	: myCurrentStatus.myCurrentHero}
 	];

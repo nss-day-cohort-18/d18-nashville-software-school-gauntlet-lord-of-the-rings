@@ -36,7 +36,7 @@ app.factory("CurrentStateFactory", function() {
 		myStatus.myCurrentMonsters.splice(0, 1);
 		return myStatus.myCurrentMonsters;
 	};
-
+		//this lets it know who is fighting and knows to take it out of the fellowship
 	let killPlayer = (currentFighter) => {
 		function findPlayer(player) {
 			return player !== currentFighter;
@@ -47,7 +47,8 @@ app.factory("CurrentStateFactory", function() {
 		return myStatus.myCurrentFellowship;
 	};
 
-	let sendOffHero = (hero) => {
+	let sendOffHero = (hero) => {		//this splices the hero where he is inside the array using indexOf,
+										// it takes out the current hero.
 		return myStatus.myCurrentFellowship.splice(myStatus.myCurrentFellowship.indexOf(hero), 1);
 	};
 	let bringBackHero = (hero) => {
