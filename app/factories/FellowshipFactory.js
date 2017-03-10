@@ -18,6 +18,7 @@ app.factory("FellowshipFactory", function(LOTR) {
 				this.name = customHero.name;
 				this.health = this.health + customHero.health;
 				this.weapon = customHero.weapon;
+				this.img = customHero.img;
 			};
 			LOTR.Combatants.Fellowship[customHero.variableName].prototype = new LOTR.Combatants.Fellowship.Hero();
 			resolve(LOTR.Combatants.Fellowship);
