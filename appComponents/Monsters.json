@@ -3,13 +3,15 @@
 		"name": "Ringraith",
 		"health": 50,
 		"variableName": "Ringraith",
-		"weapon": "TwoHandedSword"
+		"weapon": "TwoHandedSword",
+		"img": "Ringraith.png"
 	},
 	{
 		"name": "Orc",
 		"health": 30,
 		"variableName": "Orc",
-		"weapon": "Sword"
+		"weapon": "Sword",
+		"img": "Orc.png"
 	},
 	{
 		"name": "Cave Troll",
@@ -21,13 +23,15 @@
 		"name": "Uruk-hai",
 		"health": 65,
 		"variableName": "Urukhai",
-		"weapon": "TwoHandedSword"
+		"weapon": "TwoHandedSword",
+		"img": "Orc.png"
 	},
 	{
 		"name": "Smeagol",
 		"health": 100,
 		"variableName": "Smeagol",
-		"weapon": "Teeth"
+		"weapon": "Teeth",
+		"img": "Gollum.png"
 	},
 	{
 		"name": "Saruman",
