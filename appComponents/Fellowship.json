@@ -26,12 +26,14 @@
 		"variableName": "Aragorn",
 		"weapon": "Narsil",
 		"img": "Aragorn.png"
+
 	},
 	{
 		"name": "Legolas",
 		"health": 170,
 		"variableName": "Legolas",
-		"weapon": "Bow"
+		"weapon": "Bow",
+		"img": "legolas.jpg"
 	},
 	{
 		"name": "Gimli",
