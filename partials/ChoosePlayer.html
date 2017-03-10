@@ -16,7 +16,7 @@
           <h3>{{ fellow.name }}</h3>
           <p>Health: {{ fellow.health }}</p>
           <!-- <p>{{ fellow.strength }}</p> -->
-          <p>Weapon: {{ fellow.weapon }}</p>
+          <p>Weapon: {{ fellow.weapon.name }}</p>
           <p><a ng-href="#!/BattleView" ng-click="sendForth(fellow)" class="btn btn-success" role="button">Send Forth!</a></p>
         </div>
       </div>
