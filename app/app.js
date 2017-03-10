@@ -42,7 +42,7 @@ app.run(($location, $http, LOTR, MonsterFactory, FellowshipFactory, WeaponFactor
 	let mySheeeeyit = [
 
 		$http.get("../appComponents/Weapons.json")
-	            .then(
+	            .then(//what is happening here? Is this getting each json and making a weapon and then.....?
 	            	(WeaponData) => Promise.all(WeaponData.data.map((Weapons) => WeaponFactory.createWeapons(Weapons)))
 	            	),
 	

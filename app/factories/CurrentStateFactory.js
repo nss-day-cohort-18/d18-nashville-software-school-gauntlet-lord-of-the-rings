@@ -18,7 +18,7 @@ app.factory("CurrentStateFactory", function() {
 	};
 
 	let fighting = false;
-
+// What does this boolean part do? 
 	let getFightingStatus = () => fighting;
 	let setFightingStatus = (boolean) => fighting = boolean;
 
