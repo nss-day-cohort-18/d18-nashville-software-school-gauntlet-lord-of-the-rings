@@ -27,4 +27,14 @@ li {
 
 .battle-description {
 	min-height: 600px;
+	background-color: transparent;
+	border: none !important;
+}
+
+.battle-caption {
+	background-color: lightgrey;
+}
+
+.battle-img {
+	bottom: 0;
 }
