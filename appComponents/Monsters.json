@@ -17,7 +17,8 @@
 		"name": "Cave Troll",
 		"health": 70,
 		"variableName": "CaveTroll",
-		"weapon": "GiantSpear"
+		"weapon": "GiantSpear",
+		"img": "troll.jpg"
 	},
 	{
 		"name": "Uruk-hai",
