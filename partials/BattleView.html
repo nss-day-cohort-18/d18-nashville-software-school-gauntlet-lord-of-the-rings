@@ -9,17 +9,16 @@
       <div class="col-sm-5 col-md-5 battle-player">
       <!-- progress bar -->
       <div class="progress">
-        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-          <span class="sr-only">60% Complete</span>
+        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{ player.health }}%;">
         </div>
       </div>
       <!-- player card -->
         <div class="thumbnail battle-description">
-          <div class="caption battle-caption"> 
-            <h3>{{ player.name }}</h3>
-            <p>{{ player.health }}</p>
-            <p>{{ player.strength }}</p>
-            <p>{{ player.weapon }}</p>
+          <div class="caption"> 
+            <h3>Player Name: {{ player.name }}</h3>
+            <p>Player Health: {{ player.health }}</p>
+            <p>Player strength: {{ player.weapon.damage }}</p>
+            <p>Player's Weapon: {{ player.weapon.name }}</p>
           </div>
           <img ng-src="{{ player.img }}" alt="{{ player.name }}" class="battle-img">
         </div>
@@ -33,17 +32,17 @@
       <div class="col-sm-5 col-md-5 battle-player">
         <!-- progress bar -->
         <div class="progress">
-          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-            <span class="sr-only">60% Complete</span>
-          </div> 
+          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{ monster.health }}%;">
+          </div>
         </div>
         <!-- enemy card -->
         <div class="thumbnail battle-description">
           <div class="caption battle-caption">
-            <h3>{{ monster.name }}</h3>
-            <p>{{ monster.health }}</p>
-            <p>{{ monster.strength }}</p>
-            <p>{{ monster.weapon }}</p>
+            <h3>Monster Name: {{ monster.name }}</h3>
+            <p>Monster Health: {{ monster.health }}</p>
+            <p>Monster Strength: {{ monster.strength }}</p>
+            <p> Monster's Weapon: {{ monster.weapon }}</p>
+
           </div>
           <img ng-src="{{ monster.img }}" alt="{{ monster.img }}" class="battle-img">
         </div>
