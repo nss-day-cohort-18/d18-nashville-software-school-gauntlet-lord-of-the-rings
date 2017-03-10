@@ -8,12 +8,13 @@ app.factory("CurrentStateFactory", function() {
 
 	let myStatus = {
 		myCurrentLevel: 0,
-		message: ["You're not in The Shire Anymore! 3 Orcs Have Tracked you down at the Prancing Pony!"],
 		myCurrentHero: null,
 		myCurrentEnemy: null,
-		myCurrentMonsters: null,
-		myCurrentFellowship: null,
-		myCurrentPoints: 0		
+		myCurrentMonsters: [],
+		myCurrentFellowship: [],
+		myCurrentPoints: 0,
+		monstersSlain: [],
+		herosSlain: []	
 	};
 
 	let fighting = false;
@@ -22,20 +23,46 @@ app.factory("CurrentStateFactory", function() {
 	let setFightingStatus = (boolean) => fighting = boolean;
 
 	let getCurrentStatus = () => myStatus;
-	let	setCurrentStatus = ( myStatusKey, myStatusValue ) => myStatus[myStatusKey] = myStatusValue;
+	let	setCurrentStatus = ( myStatusKey, myStatusValue ) => {
+		if (myStatusKey === 'myCurrentFellowship') {
+			myStatusValue.forEach((hero) => myStatus[myStatusKey].push(hero));
+		} else {
+			myStatus[myStatusKey] = myStatusValue;			
+		}
+	};
 
-	let killMonster = () => {
+	let killMonster = (monsterSlain) => {
+		myStatus.monstersSlain.push(monsterSlain);
 		myStatus.myCurrentMonsters.splice(0, 1);
 		return myStatus.myCurrentMonsters;
 	};
 
-	let killPlayer = (playerName) => {
+	let killPlayer = (currentFighter) => {
 		function findPlayer(player) {
-			return player.name === playerName;
+			return player !== currentFighter;
 		}
-		let myPlayer = myStatus.myCurrentFellowship.find(findPlayer);
-		console.log(myPlayer);
+		myStatus.myCurrentFellowship = myStatus.myCurrentFellowship.filter(findPlayer);
+		console.log(currentFighter);
+		console.log(myStatus.myCurrentFellowship);
 		return myStatus.myCurrentFellowship;
+	};
+
+	let sendOffHero = (hero) => {
+		return myStatus.myCurrentFellowship.splice(myStatus.myCurrentFellowship.indexOf(hero), 1);
+	};
+	let bringBackHero = (hero) => {
+		return myStatus.myCurrentFellowship.push(hero);
+	};
+
+	let resetGame = () => {
+		myStatus.myCurrentLevel = 0;
+		myStatus.myCurrentHero = null;
+		myStatus.myCurrentEnemy = null;
+		myStatus.myCurrentMonsters = [];
+		myStatus.myCurrentFellowship = [];
+		myStatus.myCurrentPoints = 0;
+		myStatus.monstersSlain = [];
+		myStatus.herosSlain = [];
 	};
 
 	return {
@@ -44,7 +71,10 @@ app.factory("CurrentStateFactory", function() {
 		killMonster,
 		killPlayer,
 		getFightingStatus,
-		setFightingStatus
+		setFightingStatus,
+		sendOffHero,
+		bringBackHero,
+		resetGame
 	};
 
 });

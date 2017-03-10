@@ -20,8 +20,8 @@
 	{
 		"name": "Uruk-hai",
 		"health": 65,
-		"variableName": "Uruk-hai",
-		"weapon": "TwoHendedSword"
+		"variableName": "Urukhai",
+		"weapon": "TwoHandedSword"
 	},
 	{
 		"name": "Smeagol",
